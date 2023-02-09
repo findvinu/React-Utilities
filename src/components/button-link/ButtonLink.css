@@ -1,0 +1,154 @@
+.cta-btn {
+    display: inline-block;
+    padding: 24px 32px 22px;
+    border-radius: 31px;
+    border: 0.12em solid #08212C;
+    color: #08212C;
+    font: 400 13px/1 "polysansmedian", sans-serif;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .cta-btn .hover-frame {
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: opacity 0.2s linear;
+    -moz-transition: opacity 0.2s linear;
+    -o-transition: opacity 0.2s linear;
+    transition: opacity 0.2s linear;
+  }
+  .cta-btn .hover-frame[data-num="1"] {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 124%;
+  }
+  .cta-btn .hover-frame[data-num="1"]:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(https://barrowstreetnurseryschool.org/wp-content/themes/barrow/images/cta-hover1.svg) center center no-repeat;
+    background-size: 100% 100%;
+  }
+  .cta-btn .hover-frame[data-num="2"] {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 108%;
+  }
+  .cta-btn .hover-frame[data-num="2"]:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(https://barrowstreetnurseryschool.org/wp-content/themes/barrow/images/cta-hover2.svg) center center no-repeat;
+    background-size: 100% 100%;
+  }
+  .cta-btn.on .hover-frame {
+    opacity: 1;
+  }
+  .cta-btn.on .hover-frame:before {
+    -webkit-animation: frameMoveXY infinite 0.75s linear;
+    -moz-animation: frameMoveXY infinite 0.75s linear;
+    animation: frameMoveXY infinite 0.75s linear;
+    animation-fill-mode: forwards;
+  }
+  @-moz-keyframes frameMoveXY {
+    0% {
+      transform: scaleX(1);
+    }
+    24.99% {
+      transform: scaleX(1);
+    }
+    25% {
+      transform: scale(-1);
+    }
+    49.99% {
+      transform: scale(-1);
+    }
+    50% {
+      transform: scaleX(-1);
+    }
+    74.99% {
+      transform: scaleX(-1);
+    }
+    75% {
+      transform: scaleY(-1);
+    }
+    99.99% {
+      transform: scaleY(-1);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+  @-webkit-keyframes frameMoveXY {
+    0% {
+      transform: scaleX(1);
+    }
+    24.99% {
+      transform: scaleX(1);
+    }
+    25% {
+      transform: scale(-1);
+    }
+    49.99% {
+      transform: scale(-1);
+    }
+    50% {
+      transform: scaleX(-1);
+    }
+    74.99% {
+      transform: scaleX(-1);
+    }
+    75% {
+      transform: scaleY(-1);
+    }
+    99.99% {
+      transform: scaleY(-1);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+  @keyframes frameMoveXY {
+    0% {
+      transform: scaleX(1);
+    }
+    24.99% {
+      transform: scaleX(1);
+    }
+    25% {
+      transform: scale(-1);
+    }
+    49.99% {
+      transform: scale(-1);
+    }
+    50% {
+      transform: scaleX(-1);
+    }
+    74.99% {
+      transform: scaleX(-1);
+    }
+    75% {
+      transform: scaleY(-1);
+    }
+    99.99% {
+      transform: scaleY(-1);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }

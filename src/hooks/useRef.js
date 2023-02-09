@@ -24,7 +24,7 @@ export default function UseRefComponent(){
         <>
         <input ref={inputRef} value={name} onChange={e  => setName(e.target.value)} />
         <div>My name is {name}</div>
-        <div>I renderd {renderCount.current} times</div>
+       {/*  <div>I renderd {renderCount.current} times</div> */}
         <button onClick={focus}>Focus</button>
         <div>My name is {name} and it used to be {prevName.current}</div>
         </>

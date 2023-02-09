@@ -1,17 +1,18 @@
 import { Routes, Route, useRoutes } from "react-router-dom";
-import FormControlled from "./FunctionalComponents/FormControlled/FormControlled";
+import FormControlled from "./FunctionalComponents/form-controlled/FormControlled";
 import RenderList from "./RenderList";
 import FormControlledContextProvider from "./context/FormControlledContextProvider";
 import Render from "./Render";
 import Counters from "./ClassComponents/Counters/Counter";
-import Counter from "./FunctionalComponents/Counters/Counter";
+import Counter from "./FunctionalComponents/counters/Counter";
 import { CountersLayout } from "./CountersLayout";
 
-import Calculators from "./FunctionalComponents/Calculator/Calculators";
+import Calculators from "./FunctionalComponents/calculator/Calculators";
 import Calculator from "./ClassComponents/Calculator/Calculator";
 import { CalculatorsLayout } from "./CalculatorsLayout";
-import { NotFound } from "./FunctionalComponents/NotFound/NotFound";
+import { NotFound } from "./FunctionalComponents/not-found/NotFound";
 import { Home } from "./Home";
+import CookingLayout from './FunctionalComponents/cooking-food/CookingLayout';
 
 const RouteLinks = () => {
  /*  const element = useRoutes([
@@ -32,25 +33,28 @@ const RouteLinks = () => {
   return (
     <Routes>
       <Route path="/" element={< Home />} />
-      <Route path="/counters" element={<CountersLayout />}>      
-       <Route path="/counters/counerClass" element={<Counters />} /> 
-        <Route path="/counters/counerFunc" element={ <div className="functionalComponentWrapper dFlex"><Counter /></div>} />      
-      </Route>
-      <Route exact path="/calculator" element={<CalculatorsLayout />}>
-      <Route path="/calculator/counerClass" element={<Calculator />} /> 
-        <Route path="/calculator/counerFunc" element={<Calculators />} />      
-      </Route>
-      <Route exact path="/renderList" element={<RenderList />} />
-      <Route exact path="/renderList/:id" element={<Render />} />
-      <Route
-        exact
-        path="/formControlled"
-        element={
-          <FormControlledContextProvider>
-            <FormControlled />
-          </FormControlledContextProvider>
-        }
-      />
+      <Route path="/utilities" element={<CountersLayout />}>
+        <Route path="counters" element={<CountersLayout />}>      
+        <Route path="counerClass" element={<Counters />} /> 
+          <Route path="counerFunc" element={ <div className="functionalComponentWrapper dFlex"><Counter /></div>} />      
+        </Route>
+        <Route exact path="calculator" element={<CalculatorsLayout />}>
+        <Route path="counerClass" element={<Calculator />} /> 
+          <Route path="counerFunc" element={<Calculators />} />      
+        </Route>
+        <Route exact path="renderList" element={<RenderList />} />
+        <Route exact path="renderList/:id" element={<Render />} />
+        <Route
+          exact
+          path="formControlled"
+          element={
+            <FormControlledContextProvider>
+              <FormControlled />
+            </FormControlledContextProvider>
+          }
+        />
+       </Route>
+      <Route path="/cookingFood" element={<CookingLayout />}>Cooking Food</Route>
        <Route path="*" element={<NotFound />} />
     </Routes>   
   ); 

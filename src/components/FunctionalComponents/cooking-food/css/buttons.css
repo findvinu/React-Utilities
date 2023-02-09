@@ -1,0 +1,33 @@
+.btn {
+    background: none;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: inherit;
+    border-radius: 5px;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+
+.btn--primary{
+    color: white  !important;
+    background-color: hsl(200,100%,50%) !important;
+}
+
+.btn--primary:hover{
+    background-color: hsl(200,100%,35%)  !important;
+}
+
+.btn--secondary{
+    background-color: hsl(335deg 100% 50%)  !important;
+    color: white  !important;
+}
+
+.btn--secondary:hover{
+background-color: hsl(335deg 98% 42%)  !important;
+}
+.addRecipeBtn{
+    margin: 0 auto;
+    display: flex  !important;
+}
